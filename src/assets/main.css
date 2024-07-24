@@ -1,0 +1,126 @@
+@import './base.css';
+
+li {
+  list-style-type: none;
+}
+
+span {
+  cursor: pointer;
+}
+
+.folder-structure .title {
+  text-align: center;
+  font-size: 24px;
+  padding: 16px;
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #901cfb;
+}
+
+.create-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 20px;
+  margin: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.add-folder-btn {
+  background-color: #2d659a;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin: 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.add-btn,
+.cancel-btn,
+.item-btn {
+  padding: 4px 8px;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn {
+  background: #00af00;
+}
+
+.cancel-btn {
+  background: #ff6b6b;
+}
+
+.item-btn {
+  background: #6b70ff;
+  margin: 0 2px;
+}
+
+input {
+  width: 200px;
+  padding: 4px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 1px 1px #ccc;
+  border-radius: 4px;
+  color: #575757;
+}
+
+/* structure */
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+  position: relative;
+}
+
+li {
+  margin: 0;
+  padding: 0 12px;
+  line-height: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+li span {
+  display: inline-block;
+  position: relative;
+  padding: 4px;
+}
+
+li::before {
+  content: '';
+  border-top: 2px solid #ccc;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 12px;
+}
+
+li span::before {
+  content: '';
+  border-left: 2px solid #ccc;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+}
+
+li span::after {
+  content: '';
+  border-top: 2px solid #ccc;
+  position: absolute;
+  top: 12px;
+  left: -12px;
+}
+
+li:last-child::before,
+li:last-child span::before {
+  height: 12px;
+}
