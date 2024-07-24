@@ -12,14 +12,16 @@ const addNewFolder = () => {
 }
 
 const createNewFolder = () => {
-  items.value.push({
-    name: newFolderName.value,
-    type: 'folder',
-    children: []
-  })
+  if (newFolderName.value && newFolderName.value.trim() !== '') {
+    items.value.push({
+      name: newFolderName.value,
+      type: 'folder',
+      children: []
+    })
 
-  newFolderName.value = null
-  isNewFolder.value = false
+    newFolderName.value = null
+    isNewFolder.value = false
+  }
 }
 
 const cancelCreation = () => {

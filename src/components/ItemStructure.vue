@@ -30,16 +30,18 @@ const createNewItem = (type) => {
 }
 
 const createNewFolder = (value) => {
-  const newItem = {
-    name: newItemName.value,
-    type: newType.value
-  }
-  if (newType.value === 'folder') newItem.children = []
-  value.push(newItem)
+  if (newItemName.value && newItemName.value.trim() !== '') {
+    const newItem = {
+      name: newItemName.value,
+      type: newType.value
+    }
+    if (newType.value === 'folder') newItem.children = []
+    value.push(newItem)
 
-  newItemName.value = null
-  isNewFolder.value = false
-  newType.value = null
+    newItemName.value = null
+    isNewFolder.value = false
+    newType.value = null
+  }
 }
 
 const cancelCreation = () => {
